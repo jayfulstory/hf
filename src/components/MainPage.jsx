@@ -37,12 +37,17 @@ const MainPage = () => {
   //   };
   // }, [mousePosition]);
   return (
-    <div className='section1 h-screen flex justify-center items-center bg-PURPLE'>
+    <div className='relative h-screen w-full flex justify-center items-center'>
       {/* <div className='bgLight cursor w-[200px] top-0 left-0 -translate-x-1/2 -translate-y-1/2 h-[200px] rounded-full fixed bg-blue-100 blur-[100px] '></div> */}
-      <h1 className='text-7xl font-bold text-white z-10'>MainPage</h1>
-      <button className='absolute bottom-16 right-32 border text-white border-white p-2 cursor-pointer hover:bg-RED  hover:border-RED duration-300 rounded-md'>
-        ダウンロード
+      <img
+        className='w-[200px] absolute left-8 top-8'
+        src='/public/logo.svg'
+        alt=''
+      />
+      <button className='absolute top-12 right-12 rounded-full border border-white text-white px-4 py-2 text-xs hover:border-PURPLE hover:bg-PURPLE hover:text-white hover:scale-110 duration-300'>
+        DOWNLOAD
       </button>
+      <h1 className='text-7xl font-bold text-white z-10'>MainPage</h1>
     </div>
   );
 };
