@@ -53,40 +53,65 @@ const Commercial = () => {
     });
   }, []);
   return (
-    <div className='obj h-screen w-100% relative flex justify-center items-center'>
-      <div className='w-3/4 h-3/4  flex flex-col justify-center items-center'>
-        <div className='text-center text-xl text-white leading-10 mb-12'>
-          <h3 className='text-6xl font-bold mb-6'>まずは宇宙でデートしよう</h3>
-          <p className=''>
-            StellaMeetでは二人だけの惑星でデートをすることができます。
-          </p>
-          <p className=''>
-            宇宙の美しさに包まれた中でのデートは、まるで夢のよう
-          </p>
-          <p className=''>
-            星の数ほど訪れる出会いの中から、だった一つの運命の出会いを見つけませんか？
-          </p>
+    <div className='-translate-y-[25vh]'>
+      <img src='/public/bg-1.png' alt='' />
+      <div className='obj h-2/3 w-full relative flex justify-center items-center bg-white -mt-[25vh]'>
+        <div className='w-full h-full  flex flex-col justify-center items-center z-10'>
+          <div className='text-center text-xl  leading-10 mb-12'>
+            <h3 className='text-6xl font-bold mb-12'>
+              まずは宇宙でデートしよう
+            </h3>
+            <p className=''>
+              StellaMeetでは二人だけの惑星でデートをすることができます。
+              <br />
+              宇宙の美しさに包まれた中でのデートは、まるで夢のよう
+              <br />
+              星の数ほど訪れる出会いの中から、だった一つの運命の出会いを見つけませんか？
+              <br />
+            </p>
+          </div>
+          <div className='z-10'>
+            <div className='h-[400px]'>
+              <img className='h-full' src='/uni3.png' alt='' />
+            </div>
+          </div>
         </div>
         <div className=''>
-          <div className='h-[500px]'>
-            <img className='h-full' src='/uni3.png' alt='' />
+          <div
+            ref={img1}
+            className='w-[180px]  absolute top-[10vh] left-[10vw]'
+          >
+            <img className='h-ful' src='/uni3.png' alt='' />
+          </div>
+          <div ref={img2} className='w-[220px]  absolute top-[8vh] right-[8vw]'>
+            <img className='h-ful' src='/uni2.png' alt='' />
+          </div>
+          <div
+            ref={img3}
+            className='w-[200px] absolute bottom-[10vh] left-[10vw]'
+          >
+            <img className='ufo h-ful' src='/ufo.png' alt='' />
+          </div>
+          <div
+            ref={img4}
+            className='w-[200px]  absolute bottom-[8vh] right-[8vw]  -rotate-45'
+          >
+            <img className='h-ful' src='/uni4.png' alt='' />
           </div>
         </div>
       </div>
-      <div ref={img1} className='w-[180px]  absolute top-[10vh] left-[10vw]'>
-        <img className='h-ful' src='/uni3.png' alt='' />
-      </div>
-      <div ref={img2} className='w-[220px]  absolute top-[8vh] right-[8vw]'>
-        <img className='h-ful' src='/uni2.png' alt='' />
-      </div>
-      <div ref={img3} className='w-[200px] absolute bottom-[10vh] left-[10vw]'>
-        <img className='ufo h-ful' src='/ufo.png' alt='' />
-      </div>
-      <div
-        ref={img4}
-        className='w-[200px]  absolute bottom-[8vh] right-[8vw]  -rotate-45'
-      >
-        <img className='h-ful' src='/uni4.png' alt='' />
+      <div className='relative'>
+        <img className='-mt-1' src='/public/bg-2.png' alt='' />
+        <img
+          className='absolute top-2/3 left-1/4 w-[280px]'
+          src='/public/stars4.svg'
+          alt=''
+        />
+        <img
+          className='absolute top-1/4 left-3/4  w-[150px] -z-10'
+          src='/public/stars5.svg'
+          alt=''
+        />
       </div>
     </div>
   );

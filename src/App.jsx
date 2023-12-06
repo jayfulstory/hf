@@ -13,7 +13,8 @@ function App() {
   return (
     <div className='w-screen '>
       {/* <Navbar /> */}
-      <div className='max-w-full bg-gradient-to-b from-[#091a68] via-[#2f3d7c] to-[#1c1917]'>
+      {/* <div className='max-w-full bg-gradient-to-b from-[#0f1025] via-[#0f1025] to-[#0f1025]'> */}
+      <div className='max-w-full bg-[#303560]'>
         <MainPage />
         <Commercial />
         <Horizontal />
@@ -21,8 +22,8 @@ function App() {
         <SampleUi />
         <VideoContent />
         <Ending />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -56,10 +56,15 @@ const Horizontal = () => {
   }, []);
 
   return (
-    <div ref={triggerRef} className='w-screen h-screen '>
+    <div ref={triggerRef} className='w-screen h-screen'>
       <img
-        className='w-[500px] absolute bottom-[-10vh] left-[5vw]'
-        src='/public/stars2.svg'
+        className='w-[350px] absolute -top-46 right-8'
+        src='/public/stars1.svg'
+        alt=''
+      />
+      <img
+        className='w-[700px] absolute -bottom-36 left-8'
+        src='/public/stars8.svg'
         alt=''
       />
       <div
