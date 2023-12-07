@@ -53,9 +53,9 @@ const Commercial = () => {
     });
   }, []);
   return (
-    <div className='-translate-y-[25vh]'>
-      <img src='/public/bg-1.png' alt='' />
-      <div className='obj h-2/3 w-full relative flex justify-center items-center bg-white -mt-[25vh]'>
+    <div className='mt-[25vh]'>
+      {/* <img src='/public/bg-1.png' alt='' /> */}
+      <div className='obj h-screen w-full relative flex justify-center items-center text-white'>
         <div className='w-full h-full  flex flex-col justify-center items-center z-10'>
           <div className='text-center text-xl  leading-10 mb-12'>
             <h3 className='text-6xl font-bold mb-12'>
@@ -101,7 +101,6 @@ const Commercial = () => {
         </div>
       </div>
       <div className='relative'>
-        <img className='-mt-1' src='/public/bg-2.png' alt='' />
         <img
           className='absolute top-2/3 left-1/4 w-[280px]'
           src='/public/stars4.svg'
