@@ -53,26 +53,27 @@ const Commercial = () => {
     });
   }, []);
   return (
-    <div className='mt-[25vh]'>
-      {/* <img src='/public/bg-1.png' alt='' /> */}
+    <div className='my-[25vh]'>
       <div className='obj h-screen w-full relative flex justify-center items-center text-white'>
         <div className='w-full h-full  flex flex-col justify-center items-center z-10'>
-          <div className='text-center text-xl  leading-10 mb-12'>
-            <h3 className='text-6xl font-bold mb-12'>
+          <div className='text-center text-xl leading-8 -mb-[100px]'>
+            <h3 className='text-6xl font-bold mb-8'>
               まずは宇宙でデートしよう
             </h3>
             <p className=''>
               StellaMeetでは二人だけの惑星でデートをすることができます。
               <br />
-              宇宙の美しさに包まれた中でのデートは、まるで夢のよう
+              宇宙の美しさに包まれた中でのデートは、まるで夢のよう。
               <br />
-              星の数ほど訪れる出会いの中から、だった一つの運命の出会いを見つけませんか？
+              星の数ほど訪れる出会いの中から、
+              <br />
+              だった一つの運命の出会いを見つけませんか？
               <br />
             </p>
           </div>
           <div className='z-10'>
-            <div className='h-[400px]'>
-              <img className='h-full' src='/uni3.png' alt='' />
+            <div className='h-[650px]'>
+              <img className='h-full' src='/star.png' alt='' />
             </div>
           </div>
         </div>

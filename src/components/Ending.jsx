@@ -53,7 +53,7 @@ const Ending = () => {
   return (
     <div
       ref={endingTrigger}
-      className='w-screen h-screen flex justify-center items-center relative overflow-hidden'
+      className='w-full h-screen flex justify-center items-center relative'
     >
       <img
         ref={earth}
@@ -74,7 +74,7 @@ const Ending = () => {
       >
         <div className=' w-[800px] h-[800px] flex flex-col items-center justify-center'>
           <div className='w-full h-[300px] bg-red-400'></div>
-          <div className='text-7xl font-bold h-[300px] flex justify-center items-center'>
+          <div className='text-7xl text-white font-bold h-[300px] flex justify-center items-center'>
             <h2>今すぐ無料ではじめる</h2>
           </div>
         </div>

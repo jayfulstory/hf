@@ -10,8 +10,8 @@ const Horizontal = () => {
 
   useEffect(() => {
     function getAmountWidth() {
-      // let w = sectionRef.current.scrollWidth;
-      let w = sectionRef.current.offsetWidth;
+      let w = sectionRef.current.scrollWidth;
+      // let w = sectionRef.current.offsetWidth;
       return -(w - window.innerWidth);
     }
 
@@ -56,7 +56,7 @@ const Horizontal = () => {
   }, []);
 
   return (
-    <div ref={triggerRef} className='w-screen h-screen'>
+    <div ref={triggerRef} className='h-screen '>
       <img
         className='w-[350px] absolute -top-46 right-8'
         src='/public/stars1.svg'
@@ -69,9 +69,8 @@ const Horizontal = () => {
       />
       <div
         ref={sectionRef}
-        className='h-screen w-fit flex items-center lg:flex-nowrap  gap-64 pl-64 pr-16'
+        className='h-screen w-fit flex items-center lg:flex-nowrap  gap-x-40 pl-64 pr-16'
       >
-        <Profile />
         <Profile />
         <Profile />
         <Profile />
