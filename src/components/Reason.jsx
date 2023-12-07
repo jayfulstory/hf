@@ -32,8 +32,8 @@ const Reason = () => {
         </div>
       </div>
       <div className='-mt-[15vh]'>
-        <img className='' src='/public/bg-4.png' alt='' />
-        <img className='-mt-[5vh]' src='/public/bg-2.png' alt='' />
+        <img className='' src='/bg-4.png' alt='' />
+        <img className='-mt-[5vh]' src='/bg-2.png' alt='' />
       </div>
     </div>
   );
