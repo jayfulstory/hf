@@ -6,19 +6,19 @@ gsap.registerPlugin(ScrollTrigger);
 const SampleUi = () => {
   const contents = [
     {
-      scr: '/public/1.png',
+      scr: '/1.png',
       text: `まず、好きな雰囲気の惑星の主と話してみてください`,
     },
     {
-      scr: '/public/1.png',
+      scr: '/1.png',
       text: '自分と似ている惑星を探すこともできます！',
     },
     {
-      scr: '/public/1.png',
+      scr: '/1.png',
       text: '話も合うし会ってみたいけど少し不安なところが、、、',
     },
     {
-      scr: '/public/1.png',
+      scr: '/1.png',
       text: '仮想空間で安全に出会いをお楽しみください！',
     },
   ];
@@ -74,11 +74,7 @@ const SampleUi = () => {
   return (
     <div className='relative w-screen flex justify-center px-16'>
       <div className='absolute w-full h-full'>
-        <img
-          className='absolute top-1/4 -left-1/3'
-          src='/public/stars3.svg'
-          alt=''
-        />
+        <img className='absolute top-1/4 -left-1/3' src='/stars3.svg' alt='' />
       </div>
       <div className='w-5/12'>
         {contents.map(content => {

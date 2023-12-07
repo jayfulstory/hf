@@ -6,10 +6,10 @@ const MainPage = () => {
         <h1 className='text-white font-bold text-7xl -translate-x-1/2'>
           StellaMeet
         </h1>
-        <img className='absolute w-fit' src='/public/main.png' alt='' />
+        <img className='absolute w-fit' src='/main.png' alt='' />
         <img
           className='absolute w-[200px] top-[30px] left-[30px]'
-          src='/public/logo.png'
+          src='/logo.png'
           alt=''
         />
       </div>
