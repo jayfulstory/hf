@@ -104,12 +104,12 @@ const Commercial = () => {
       <div className='relative'>
         <img
           className='absolute top-2/3 left-1/4 w-[280px]'
-          src='/public/stars4.svg'
+          src='/stars4.svg'
           alt=''
         />
         <img
           className='absolute top-1/4 left-3/4  w-[150px] -z-10'
-          src='/public/stars5.svg'
+          src='/stars5.svg'
           alt=''
         />
       </div>

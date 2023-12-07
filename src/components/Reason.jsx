@@ -8,7 +8,7 @@ const Reason = () => {
     <div className='relative w-screen  flex flex-col justify-center items-center text-center'>
       <img
         className='w-[350px] absolute right-[2vw] bottom-[-15vh]'
-        src='/public/stars1.svg'
+        src='/stars1.svg'
         alt=''
       />
       <h1 className='text-6xl text-white font-bold mt-[20vh] mb-32 '>
