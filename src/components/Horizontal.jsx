@@ -40,7 +40,7 @@ const Horizontal = () => {
         // end: '+=3000',
         end: '+=' + getAmountWidth() * -1,
         pin: true,
-        scrub: 0.5,
+        scrub: true,
         invalidateOnRefresh: true,
         ease: 'none',
       },
@@ -68,7 +68,7 @@ const Horizontal = () => {
       />
       <div
         ref={sectionRef}
-        className='h-screen w-fit flex items-center lg:flex-nowrap  gap-x-40 pl-64 pr-16'
+        className='h-screen w-fit flex items-center  gap-x-40 pl-64 pr-16'
       >
         <Profile />
         <Profile />
