@@ -54,7 +54,7 @@ const Commercial = () => {
   }, []);
   return (
     <div className=' relative w-full text-white '>
-      <img className='w-full' src='/bg-cover1.svg' alt='' />
+      <img className='w-full' src='/bg/bg-cover1.svg' alt='' />
 
       <div className='relative w-full flex flex-col justify-center items-center bg-[#3D3584]'>
         <div className='text-center text-xl leading-8 '>
@@ -71,36 +71,36 @@ const Commercial = () => {
           </p>
         </div>
         <div className='h-[650px]'>
-          <img className='h-full' src='/star.png' alt='' />
+          <img className='h-full' src='/stars/star.png' alt='' />
         </div>
         <div className=' w-full h-full'>
           <img
             ref={img1}
             className='w-[180px]  absolute top-[8vh] left-[8vw] h-ful'
-            src='/uni3.png'
+            src='/obj/uni3.png'
             alt=''
           />
           <img
             ref={img2}
             className='w-[220px]  absolute top-[4vh] right-[6vw] h-ful'
-            src='/uni2.png'
+            src='/stars/uni2.png'
             alt=''
           />
           <img
             ref={img3}
             className='w-[200px] absolute bottom-[12vh] left-[10vw] ufo h-ful'
-            src='/ufo.png'
+            src='/obj/ufo.png'
             alt=''
           />
           <img
             ref={img4}
             className='w-[200px] absolute ute bottom-[4vh] right-[4vw] -rotate-45h-ful'
-            src='/uni4.png'
+            src='/obj/uni4.png'
             alt=''
           />
         </div>
       </div>
-      <img className='w-full ' src='/bg-cover2.svg' alt='' />
+      <img className='w-full ' src='/bg/bg-cover2.svg' alt='' />
     </div>
   );
 };

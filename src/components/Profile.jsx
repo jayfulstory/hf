@@ -4,7 +4,7 @@ const Profile = () => {
       <div className='flex flex-col justify-between items-center  bg-gray-200 border-[1px] border-[hsla(0,0%,100%,.2);] backdrop-blur w-[380px] h-[500px] p-8 drop-shadow-lg  rounded-2xl'>
         <img
           className='w-32 h-32 border-4 bg-blue-400 rounded-full'
-          src='/profile.png'
+          src='/obj/profile.png'
           alt=''
         />
         <div className='text-center -translate-y-4'>

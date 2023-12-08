@@ -78,7 +78,11 @@ const SampleUi = () => {
   return (
     <div className='relative w-screen flex justify-center px-16'>
       <div className='absolute w-full h-full'>
-        <img className='absolute top-1/4 -left-1/3' src='/stars3.svg' alt='' />
+        <img
+          className='absolute top-1/4 -left-1/3'
+          src='/bg/stars3.svg'
+          alt=''
+        />
       </div>
       <div className='w-5/12'>
         {contents.map(content => {

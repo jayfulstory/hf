@@ -17,10 +17,10 @@ const Reason = () => {
     <div className='relative w-screen  flex flex-col justify-center items-center text-center'>
       <img
         className='w-[350px] absolute right-[2vw] top-[75vh]'
-        src='/stars1.svg'
+        src='/bg/stars1.svg'
         alt=''
       />
-      <img className='absolute top-0 left-0' src='/circle.svg' alt='' />
+      <img className='absolute top-0 left-0' src='/bg/circle.svg' alt='' />
       <h1 className='text-6xl text-white font-bold mt-[20vh] mb-24 '>
         毎日<span className='text-7xl'>30万</span>組が
         <br />
@@ -33,7 +33,7 @@ const Reason = () => {
             return (
               <div
                 key={text}
-                style={{ backgroundImage: `url('/reason${i + 1}.svg')` }}
+                style={{ backgroundImage: `url('/obj/reason${i + 1}.svg')` }}
                 className='w-[280px] h-[280px] rounded-full  flex justify-center items-center bg-cover'
               >
                 <p className='m-10 p-4 bg-WHITE rounded-xl text-xl'>
@@ -47,16 +47,16 @@ const Reason = () => {
         </div>
       </div>
       <div className=' relative -mt-[10vh] z-10'>
-        <img className='w-full' src='/bg-4.png' alt='' />
-        <img className='w-full -mt-[5vh]' src='/bg-2.png' alt='' />
+        <img className='w-full' src='/bg/bg-4.png' alt='' />
+        <img className='w-full -mt-[5vh]' src='/bg/bg-2.png' alt='' />
         <img
-          className='w-[280px] absolute bottom-[5vh] left-[20vw]'
-          src='/stars4.svg'
+          className='w-[280px] absolute bottom-0 left-[20vw]'
+          src='/stars/star3.png'
           alt=''
         />
         <img
           className='w-[180px] absolute bottom-[20vh] right-[18vw] -z-10'
-          src='/stars5.svg'
+          src='/stars/star4.png'
           alt=''
         />
       </div>

@@ -9,9 +9,9 @@ const Horizontal = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
+    console.log(innerWidth, triggerRef.current.offsetWidth);
     function getAmountWidth() {
       let w = sectionRef.current.scrollWidth;
-      // let w = sectionRef.current.offsetWidth;
       return -(w - window.innerWidth);
     }
 
@@ -37,7 +37,6 @@ const Horizontal = () => {
       scrollTrigger: {
         trigger: triggerRef.current,
         start: 'top top',
-        // end: '+=3000',
         end: '+=' + getAmountWidth() * -1,
         pin: true,
         scrub: true,
@@ -45,30 +44,30 @@ const Horizontal = () => {
         ease: 'none',
       },
     });
-    t.to(sectionRef.current, { duration: 1 }) //
+    t.to(triggerRef.current, {}) //
       .to(sectionRef.current, {
         x: getAmountWidth,
         duration: 4,
         ease: 'none',
       })
-      .to(sectionRef.current, { duration: 1 });
+      .to(triggerRef.current, {});
   }, []);
 
   return (
     <div ref={triggerRef} className='h-screen '>
       <img
         className='w-[350px] absolute -top-46 right-8'
-        src='/stars1.svg'
+        src='/bg/stars1.svg'
         alt=''
       />
       <img
         className='w-[700px] absolute -bottom-36 left-8'
-        src='/stars8.svg'
+        src='/bg/stars8.svg'
         alt=''
       />
       <div
         ref={sectionRef}
-        className='h-screen w-fit flex items-center  gap-x-40 pl-64 pr-16'
+        className='h-screen flex items-center  gap-x-40 pl-64 pr-16'
       >
         <Profile />
         <Profile />

@@ -45,24 +45,24 @@ const Ending = () => {
   return (
     <div
       ref={endingTrigger}
-      className='w-full h-screen flex justify-center items-center relative'
+      className='w-screen h-screen flex justify-center items-center relative'
     >
       <img
         ref={earth}
         className=' w-[85vw] md:w-[60vw] h-auto absolute bottom-[30vh]  md:-bottom-[8vh] '
-        src='/earth.svg'
+        src='/bg/earth.png'
         alt=''
       />
       <img
         ref={cloud}
         className='w-full h-auto absolute translate-x-full'
-        src='/cloud.png'
+        src='/bg/cloud.png'
         alt=''
       />
 
       <div
         ref={download}
-        className='w-full h-full flex justify-center items-center bg-blue-300 absolute top-0 bottom-0 '
+        className='w-screen h-screen flex justify-center items-center bg-blue-300 absolute top-0 bottom-0 '
       >
         <div className=' w-[800px] h-[800px] flex flex-col items-center justify-center'>
           <div className='w-full h-[300px] bg-red-400'></div>
