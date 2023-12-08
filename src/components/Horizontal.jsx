@@ -37,13 +37,12 @@ const Horizontal = () => {
       scrollTrigger: {
         trigger: triggerRef.current,
         start: 'top top',
-        end: '+=3000',
-        // end: '+=' + getAmountWidth() * -1,
+        // end: '+=3000',
+        end: '+=' + getAmountWidth() * -1,
         pin: true,
-        scrub: true,
+        scrub: 0.5,
         invalidateOnRefresh: true,
         ease: 'none',
-        // markers: true,
       },
     });
     t.to(sectionRef.current, { duration: 1 }) //

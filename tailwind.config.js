@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        DARK_BLUE: '#120331',
         PURPLE: '#8782ff',
-        BLUE: '#a793fc',
+        BLUE: '#3602A6',
         GREEN: '#bfe8e5',
         RED: '#f3bef1',
         PINK: '#f80ef2',
+        WHITE: '#ffffff9c',
       },
     },
   },

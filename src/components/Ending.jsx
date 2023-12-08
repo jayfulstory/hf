@@ -20,27 +20,19 @@ const Ending = () => {
           ease: 'none',
         },
       })
-      // .to(trigger.current, { duration: 1 })
       .to(earth.current, {
         scale: 4,
-        // duration: 4,
-      })
-      .set(endingTrigger.current, {
-        backgroundColor: 'white',
-      })
-      .to(earth.current, {
         opacity: 0,
-        // duration: 4,
+        duration: 1,
       })
-      .from(
-        download.current,
-        {
-          scale: 1.1,
-          opacity: 0,
-          // duration: 4,
-        },
-        '<'
-      );
+      .from(download.current, {
+        scale: 1.1,
+        opacity: 0,
+      })
+      .set(earth.current, {
+        display: 'none',
+      })
+      .to(download.current, {});
 
     gsap.to(cloud.current, {
       xPercent: -200,
@@ -57,13 +49,13 @@ const Ending = () => {
     >
       <img
         ref={earth}
-        className='w-[60vw] h-auto absolute top-auto -bottom-[8vh] '
+        className=' w-[85vw] md:w-[60vw] h-auto absolute bottom-[30vh]  md:-bottom-[8vh] '
         src='/earth.svg'
         alt=''
       />
       <img
         ref={cloud}
-        className='w-screen h-auto absolute top-auto translate-x-full'
+        className='w-full h-auto absolute translate-x-full'
         src='/cloud.png'
         alt=''
       />

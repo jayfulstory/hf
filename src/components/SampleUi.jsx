@@ -43,11 +43,13 @@ const SampleUi = () => {
       const tl = gsap
         .timeline({ ease: 'none' }) //
         .from(section, {
+          y: 30,
           scale: 0.8,
           opacity: 0,
         })
         .to(section, {})
         .to(section, {
+          y: -30,
           scale: 0.8,
           opacity: 0,
         });
@@ -55,18 +57,20 @@ const SampleUi = () => {
       ScrollTrigger.create({
         trigger: ending.current[i],
         start: 'top 45%',
-        end: 'bottom 55%',
+        end: 'bottom 65%',
         animation: tl,
         scrub: true,
+        // markers: true,
       });
     });
     gsap.to(sections.current[0], {
       scrollTrigger: {
         trigger: textTrigger.current,
-        start: 'top top',
+        start: 'top 45%',
         endTrigger: ending.current[3],
-        end: 'bottom bottom',
+        end: 'bottom 65%',
         pin: true,
+        // markers: true,
       },
     });
   }, []);
@@ -95,6 +99,7 @@ const SampleUi = () => {
       </div>
       <div
         ref={textTrigger}
+        // className='relative w-7/12 h-full flex flex-col justify-center items-center'
         className='relative w-7/12 h-screen flex justify-center items-center'
       >
         {contents.map(content => {
@@ -102,7 +107,8 @@ const SampleUi = () => {
             <div
               ref={addToRef}
               key={content.text}
-              className='w-full h-full absolute flex justify-center items-center'
+              // className='w-full h-screen flex justify-center items-center mb-[10vh]'
+              className='w-full h-full absolute flex justify-center'
             >
               <h2 className='text-5xl font-bold text-white text-center z-10'>
                 {content.text}

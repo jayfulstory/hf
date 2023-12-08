@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className='w-screen '>
-      <div className='max-w-full bg-gradient-to-b from-[#120331] to-[#3602A6]'>
+      <div className='max-w-full bg-gradient-to-b from-DARK_BLUE to-BLUE'>
         <MainPage />
         <Commercial />
         <Horizontal />

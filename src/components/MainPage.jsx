@@ -1,13 +1,27 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const MainPage = () => {
+  const mainVisual = useRef();
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: mainVisual.current,
+      start: 'top top',
+      pin: true,
+      pinSpacing: false,
+    });
+  }, []);
   return (
-    <div className='relative h-screen w-full'>
+    <div ref={mainVisual} className='relative h-screen w-full'>
       <div className='w-full h-full flex justify-center items-center bg-[url("/main.png")] bg-cover bg-no-repeat bg-bottom'>
         <div className='w-full h-full flex justify-center items-center'>
-          <img
+          {/* <img
             className='absolute w-[200px] top-[30px] left-[30px]'
             src='/logo.png'
             alt=''
-          />
+          /> */}
         </div>
       </div>
     </div>
