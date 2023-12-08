@@ -9,7 +9,6 @@ const Horizontal = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
-    console.log(innerWidth, triggerRef.current.offsetWidth);
     function getAmountWidth() {
       let w = sectionRef.current.scrollWidth;
       return -(w - window.innerWidth);
@@ -44,17 +43,45 @@ const Horizontal = () => {
         ease: 'none',
       },
     });
-    t.to(triggerRef.current, {}) //
-      .to(sectionRef.current, {
-        x: getAmountWidth,
-        duration: 4,
-        ease: 'none',
-      })
-      .to(triggerRef.current, {});
+    t.to(sectionRef.current, {
+      x: getAmountWidth,
+      duration: 4,
+      ease: 'none',
+    });
   }, []);
 
+  const horizontalContents = [
+    {
+      img: '',
+      title: 'ユーザーの心理的な不安を解消し、楽しいデートを提供します',
+      text: 'VRゴーグルとスマートフォンのカメラを使い、まるで実際にデートをしているかのように二人だけの惑星（仮想空間）でデートをすることができます。',
+    },
+    {
+      img: '',
+      title: '100種類以上の惑星デートプランから選べます',
+      text: 'デートプランを考える必要はありません。事前に相手に求めることを登録しておくことで、StellaMeetが世界100万人を対象にしたアンケートの結果から作成した惑星デートプランを提案します。',
+    },
+    {
+      img: '',
+      title: 'Jupiter（AIシステム）のサポートが受けられます',
+      text: '困ったことがあればその都度Jupiterが相談に乗ってくれます。家族や友人に相談しにくいことも気軽に相談することができます。',
+    },
+    {
+      img: '',
+      title: 'デートの様子からAIシステムが相手との性格分析・診断をします',
+      text: '世界100万人のデータから、あなたと相手の性格を分析・診断します。惑星デートから24時間以内に分析・診断レポートを見ることができます。',
+    },
+    {
+      img: '',
+      title: '理想の相手を探すために、銀河系を旅することができます',
+      text: 'AIシステムが今までの惑星デートを分析し、あなたとマッチしそうな人がいる銀河系に連れて行ってくれます。魅力的に感じなかった場合は、その銀河系から離れ、違う銀河系に移動できます。',
+    },
+  ];
+
+  console.log(horizontalContents);
+
   return (
-    <div ref={triggerRef} className='h-screen '>
+    <div ref={triggerRef} className='relative h-screen '>
       <img
         className='w-[350px] absolute -top-46 right-8'
         src='/bg/stars1.svg'
@@ -67,7 +94,7 @@ const Horizontal = () => {
       />
       <div
         ref={sectionRef}
-        className='h-screen flex items-center  gap-x-40 pl-64 pr-16'
+        className='h-screen flex items-center  gap-x-40 px-64 w-fit'
       >
         <Profile />
         <Profile />

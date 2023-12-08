@@ -1,7 +1,7 @@
 const Reason = () => {
   const reasons = [
     {
-      text: '仮想デートができるマッチングアプリ利用率',
+      text: '仮想デートができる\nマッチングアプリ\n利用率',
       strong: 'No.1',
     },
     {
@@ -9,7 +9,7 @@ const Reason = () => {
       strong: 'No.1',
     },
     {
-      text: '惑星デート後のマッチング率',
+      text: '惑星デート後の\nマッチング率',
       strong: '90%',
     },
   ];
@@ -36,7 +36,10 @@ const Reason = () => {
                 style={{ backgroundImage: `url('/obj/reason${i + 1}.svg')` }}
                 className='w-[280px] h-[280px] rounded-full  flex justify-center items-center bg-cover'
               >
-                <p className='m-10 p-4 bg-WHITE rounded-xl text-xl'>
+                <p
+                  style={{ whiteSpace: 'pre-line' }}
+                  className='m-10 p-4 bg-WHITE rounded-xl text-xl'
+                >
                   {text}
                   <br />
                   <span className='font-bold text-2xl'>{strong}</span>
