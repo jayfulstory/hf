@@ -16,18 +16,24 @@ function App() {
 
   useEffect(() => {
     window.onload = () => {
-      console.log('fin');
       setIsLoading(false);
+    };
+    return () => {
+      console.log('onload');
     };
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    return () => {
+      console.log('scrollTo');
+    };
   }, [isLoading]);
 
   return (
     <div className={`w-screen ${isLoading && 'h-screen'}`}>
-      {isLoading && <Loading />}
+      {/* {isLoading && <Loading />} */}
+      <Loading isLoading={isLoading} />
       <MainPage />
       <div className='max-w-full bg-gradient-to-b from-DARK_BLUE to-BLUE'>
         <Commercial />
