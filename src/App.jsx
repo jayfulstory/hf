@@ -13,7 +13,7 @@ import imagesLoaded from 'imagesloaded';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const img = [...document.querySelectorAll('img')];
@@ -24,10 +24,10 @@ function App() {
       })
       .on('always', () => {
         console.log('always');
-        setIsLoading(false);
       })
       .on('done', () => {
         console.log('done');
+        setIsLoading(false);
       });
   }, [isLoading]);
   useEffect(() => {
