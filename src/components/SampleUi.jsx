@@ -6,20 +6,20 @@ gsap.registerPlugin(ScrollTrigger);
 const SampleUi = () => {
   const contents = [
     {
-      scr: '/1.png',
-      text: `まず、好きな雰囲気の惑星の主と話してみてください`,
+      scr: './1.png',
+      text: `まず、好きな雰囲気の惑星の\n主と話してみてください`,
     },
     {
-      scr: '/1.png',
-      text: '自分と似ている惑星を探すこともできます！',
+      scr: './1.png',
+      text: '自分と似ている惑星を\n探すこともできます！',
     },
     {
-      scr: '/1.png',
-      text: '話も合うし会ってみたいけど少し不安なところが、、、',
+      scr: './1.png',
+      text: '話も合うし会ってみたいけど\n少し不安なところが、、、',
     },
     {
-      scr: '/1.png',
-      text: '仮想空間で安全に出会いをお楽しみください！',
+      scr: './1.png',
+      text: '仮想空間で安全に出会いを\nお楽しみください！',
     },
   ];
   const textTrigger = useRef();
@@ -60,6 +60,7 @@ const SampleUi = () => {
         end: 'bottom 65%',
         animation: tl,
         scrub: true,
+        ease: 'power2.inOut',
         // markers: true,
       });
     });
@@ -70,17 +71,18 @@ const SampleUi = () => {
         endTrigger: ending.current[3],
         end: 'bottom 65%',
         pin: true,
+        ease: 'none',
         // markers: true,
       },
     });
   }, []);
 
   return (
-    <div className='relative w-screen flex justify-center px-16'>
-      <div className='absolute w-full h-full'>
+    <div className='relative lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-center px-8 md:px-16'>
+      <div className='absolute h-[200%] w-[200%]'>
         <img
-          className='absolute top-1/4 -left-1/3'
-          src='/bg/stars3.svg'
+          className='absolute  top-1/4 -left-1/3'
+          src='./bg/stars3.svg'
           alt=''
         />
       </div>
@@ -90,10 +92,10 @@ const SampleUi = () => {
             <div
               ref={endingRef}
               key={content.text}
-              className='h-screen flex flex-col items-center justify-center mb-[10vh]'
+              className='h-screen flex flex-col items-center justify-center sm:mb-[10vh]'
             >
               <img
-                className=' h-[75vh] rounded-3xl z-10'
+                className=' max-h-[75vh] rounded-3xl z-10'
                 src={content.scr}
                 alt=''
               />
@@ -110,13 +112,14 @@ const SampleUi = () => {
           return (
             <div
               ref={addToRef}
+              style={{ whiteSpace: 'pre-line' }}
               key={content.text}
               // className='w-full h-screen flex justify-center items-center mb-[10vh]'
-              className='w-full h-full absolute flex justify-center'
+              className='w-full h-full absolute flex  justify-center'
             >
-              <h2 className='text-5xl font-bold text-white text-center z-10'>
+              <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-bold text-white text-center z-10'>
                 {content.text}
-              </h2>
+              </p>
             </div>
           );
         })}

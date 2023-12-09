@@ -50,13 +50,13 @@ const Ending = () => {
       <img
         ref={earth}
         className=' w-[85vw] md:w-[60vw] h-auto absolute bottom-[30vh]  md:-bottom-[8vh] '
-        src='/bg/earth.png'
+        src='./bg/earth.png'
         alt=''
       />
       <img
         ref={cloud}
         className='w-full h-auto absolute translate-x-full'
-        src='/bg/cloud.png'
+        src='./bg/cloud.png'
         alt=''
       />
 
@@ -66,7 +66,7 @@ const Ending = () => {
       >
         <div className=' w-[800px] h-[800px] flex flex-col items-center justify-center'>
           <div className='w-full h-[300px] bg-red-400'></div>
-          <div className='text-7xl text-white font-bold h-[300px] flex justify-center items-center'>
+          <div className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold h-[300px] flex justify-center items-center'>
             <h2>今すぐ無料ではじめる</h2>
           </div>
         </div>
