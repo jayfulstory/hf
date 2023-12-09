@@ -9,7 +9,7 @@ import VideoContent from './components/VideoContent';
 import Ending from './components/Ending';
 import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
-import imagesLoaded from 'imagesloaded';
+// import imagesLoaded from 'imagesloaded';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,14 +19,14 @@ function App() {
       console.log('fin');
       setIsLoading(false);
     };
-  });
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [isLoading]);
 
   return (
-    <div className='w-screen'>
+    <div className={`w-screen ${isLoading && 'h-screen'}`}>
       {isLoading && <Loading />}
       <MainPage />
       <div className='max-w-full bg-gradient-to-b from-DARK_BLUE to-BLUE'>

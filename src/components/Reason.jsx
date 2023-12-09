@@ -31,8 +31,7 @@ const Reason = () => {
         マッチングしています
       </h1>
       <div className='px-8 z-10'>
-        <div className='flex flex-col lg:flex-row justify-center items-center gap-12'>
-          {/* <div className='grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-0 gap-8 place-items-center z-10'> */}
+        <div className='flex flex-wrap justify-center items-center gap-12'>
           {reasons.map(({ text, strong }, i) => {
             return (
               <div
