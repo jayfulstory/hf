@@ -13,31 +13,21 @@ import imagesLoaded from 'imagesloaded';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  // const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const img = [...document.querySelectorAll('img')];
+    window.onload = () => {
+      console.log('fin');
+      setIsLoading(false);
+    };
+  });
 
-    imagesLoaded(img)
-      .on('progress', instance => {
-        console.log(Math.round((instance.progressedCount * 100) / img.length));
-      })
-      .on('always', () => {
-        console.log('always');
-      })
-      .on('done', () => {
-        console.log('done');
-        setIsLoading(false);
-      });
-  }, [isLoading]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [isLoading]);
 
-  return isLoading ? (
-    <Loading />
-  ) : (
+  return (
     <div className='w-screen'>
+      {isLoading && <Loading />}
       <MainPage />
       <div className='max-w-full bg-gradient-to-b from-DARK_BLUE to-BLUE'>
         <Commercial />

@@ -78,8 +78,6 @@ const Horizontal = () => {
     },
   ];
 
-  console.log(horizontalContents);
-
   return (
     <div ref={triggerRef} className='relative h-screen '>
       <img
