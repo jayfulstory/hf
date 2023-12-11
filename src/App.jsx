@@ -23,6 +23,7 @@ function App() {
     const img = document.querySelectorAll('img');
     const getProgress = instance => {
       // setProgress(Math.round((instance.progressedCount * 100) / img.length));
+
       console.log(
         'progress',
         Math.round((instance.progressedCount * 100) / img.length)
@@ -39,10 +40,6 @@ function App() {
       window.removeEventListener('load', handleWindowLoad);
     };
   }, []);
-
-  // useEffect(() => {
-  //   console.log(progress);
-  // }, [progress]);
 
   return (
     <div className={`w-screen ${isLoading && 'h-screen'}`}>

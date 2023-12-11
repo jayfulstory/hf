@@ -24,12 +24,18 @@ const Loading = ({ isLoading }) => {
     if (!isLoading) {
       gsap.to(loadingRefBg.current, {
         autoAlpha: 0,
-        duration: 0.4,
+        onComplete() {
+          gsap.set(loadingRefBg.current, { display: 'none' });
+          tl.kill();
+        },
       });
-      tl.kill();
+      tl.to(text.chars, { autoAlpha: 0 });
     }
 
-    return () => {};
+    return () => {
+      console.log('unmount');
+      tl.kill();
+    };
   }, [isLoading]);
 
   return (
