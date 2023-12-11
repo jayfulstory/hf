@@ -8,7 +8,6 @@ const Loading = ({ isLoading }) => {
   const loadingRefBg = useRef();
   useEffect(() => {
     const text = new SplitType(loadingRef.current, { types: 'chars' });
-    gsap.defaults({ duration: 1 });
 
     const x = gsap.utils.distribute({
       base: -100,
@@ -16,7 +15,7 @@ const Loading = ({ isLoading }) => {
     });
 
     const tl = gsap
-      .timeline({ repeat: -1 })
+      .timeline({ repeat: -1, repeatDelay: 0.5 })
       .from(text.chars, { opacity: 0, y: 30, stagger: { each: 0.05 } })
       .to(text.chars, { x })
       .to(text.chars, { opacity: 0, y: -30, stagger: 0.05 });
@@ -24,18 +23,17 @@ const Loading = ({ isLoading }) => {
     if (!isLoading) {
       gsap.to(loadingRefBg.current, {
         autoAlpha: 0,
+        duration: 2,
         onComplete() {
           gsap.set(loadingRefBg.current, { display: 'none' });
           tl.kill();
         },
       });
-      tl.to(text.chars, { autoAlpha: 0 });
     }
 
-    return () => {
-      console.log('unmount');
-      tl.kill();
-    };
+    // return () => {
+    //   tl.kill();
+    // };
   }, [isLoading]);
 
   return (
