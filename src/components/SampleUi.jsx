@@ -78,7 +78,7 @@ const SampleUi = () => {
   }, []);
 
   return (
-    <div className='relative lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-center px-8 md:px-16'>
+    <div className='relative lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-center px-4 sm:px-8 md:px-16'>
       <div className='absolute h-[200%] w-[200%]'>
         <img
           className='absolute  top-1/4 -left-1/3'
@@ -105,7 +105,6 @@ const SampleUi = () => {
       </div>
       <div
         ref={textTrigger}
-        // className='relative w-7/12 h-full flex flex-col justify-center items-center'
         className='relative w-7/12 h-screen flex justify-center items-center'
       >
         {contents.map(content => {
@@ -114,10 +113,9 @@ const SampleUi = () => {
               ref={addToRef}
               style={{ whiteSpace: 'pre-line' }}
               key={content.text}
-              // className='w-full h-screen flex justify-center items-center mb-[10vh]'
               className='w-full h-full absolute flex  justify-center'
             >
-              <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-bold text-white text-center z-10'>
+              <p className='text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-bold text-white text-center z-10'>
                 {content.text}
               </p>
             </div>

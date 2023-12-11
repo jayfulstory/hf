@@ -21,7 +21,7 @@ const Reason = () => {
         alt=''
       />
       <img
-        className='absolute top-0 left-0 w-screen '
+        className='absolute top-0 left-0 min-w-[800px] w-screen '
         src='./bg/circle.svg'
         alt=''
       />

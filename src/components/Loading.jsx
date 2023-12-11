@@ -8,28 +8,35 @@ const Loading = ({ isLoading }) => {
   const loadingRefBg = useRef();
   useEffect(() => {
     const text = new SplitType(loadingRef.current, { types: 'chars' });
-
     gsap.defaults({ duration: 1 });
 
     const x = gsap.utils.distribute({
-      base: -120,
-      amount: 240,
+      base: -100,
+      amount: 200,
     });
 
-    gsap
+    const tl = gsap
       .timeline({ repeat: -1 })
       .from(text.chars, { opacity: 0, y: 30, stagger: { each: 0.05 } })
       .to(text.chars, { x })
       .to(text.chars, { opacity: 0, y: -30, stagger: 0.05 });
 
-    return () => {
-      gsap.to(loadingRefBg.current, { autoAlpha: 0 });
-    };
+    if (!isLoading) {
+      gsap.to(loadingRefBg.current, {
+        autoAlpha: 0,
+        duration: 0.4,
+      });
+      tl.kill();
+    }
+
+    return () => {};
   }, [isLoading]);
+
   return (
     <div
       ref={loadingRefBg}
-      className='w-screen h-screen  bg-black text-white font-bold text-7xl flex justify-center items-center fixed top-0 left-0 z-50 overflow-hidden'
+      className={`w-screen h-screen  bg-black text-white font-bold
+     text-2xl md:text-5xl lg:text-7xl flex justify-center items-center fixed top-0 left-0 z-50 overflow-hidden duration-1000 `}
     >
       <div ref={loadingRef} className=''>
         StellaMeet
