@@ -23,6 +23,7 @@ const Loading = ({ isLoading }) => {
     // return () => {
     //   tl.kill();
     // };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -35,10 +36,11 @@ const Loading = ({ isLoading }) => {
     }
     return () => {
       setTimeout(() => {
-        gsap.set(loadingRefBg.current, { display: 'none' });
+        // gsap.set(loadingRefBg.current, { display: 'none' });
         tl.kill();
       }, 1500);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading]);
 
   return (
