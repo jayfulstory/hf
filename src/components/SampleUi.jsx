@@ -72,14 +72,13 @@ const SampleUi = () => {
         end: 'bottom 65%',
         pin: true,
         ease: 'none',
-        // markers: true,
       },
     });
   }, []);
 
   return (
     <div className='relative lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-center px-4 sm:px-8 md:px-16'>
-      <div className='absolute h-[200%] w-[200%]'>
+      <div className='absolute h-[200%] w-[200%] '>
         <img
           className='absolute  top-1/4 -left-1/3'
           src='./bg/stars3.svg'

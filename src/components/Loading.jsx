@@ -6,6 +6,8 @@ import SplitType from 'split-type';
 const Loading = ({ isLoading }) => {
   const loadingRef = useRef();
   const loadingRefBg = useRef();
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+
   useEffect(() => {
     const text = new SplitType(loadingRef.current, { types: 'chars' });
 
@@ -14,26 +16,29 @@ const Loading = ({ isLoading }) => {
       amount: 200,
     });
 
-    const tl = gsap
-      .timeline({ repeat: -1, repeatDelay: 0.5 })
-      .from(text.chars, { opacity: 0, y: 30, stagger: { each: 0.05 } })
+    tl.from(text.chars, { opacity: 0, y: 30, stagger: { each: 0.05 } })
       .to(text.chars, { x })
       .to(text.chars, { opacity: 0, y: -30, stagger: 0.05 });
-
-    if (!isLoading) {
-      gsap.to(loadingRefBg.current, {
-        autoAlpha: 0,
-        duration: 2,
-        onComplete() {
-          gsap.set(loadingRefBg.current, { display: 'none' });
-          tl.kill();
-        },
-      });
-    }
 
     // return () => {
     //   tl.kill();
     // };
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      gsap.to(loadingRefBg.current, {
+        autoAlpha: 0,
+        duration: 1.5,
+        onComplete() {},
+      });
+    }
+    return () => {
+      setTimeout(() => {
+        gsap.set(loadingRefBg.current, { display: 'none' });
+        tl.kill();
+      }, 1500);
+    };
   }, [isLoading]);
 
   return (

@@ -39,10 +39,7 @@ const Reason = () => {
                 style={{ backgroundImage: `url('./obj/reason${i + 1}.svg')` }}
                 className='w-[280px] h-[280px] rounded-full  flex justify-center items-center bg-cover'
               >
-                <p
-                  style={{ whiteSpace: 'pre-line' }}
-                  className='m-10 p-4 bg-WHITE rounded-xl text-lg sm:text-xl'
-                >
+                <p className='m-10 p-4 bg-WHITE rounded-xl text-lg sm:text-xl whitespace-pre-line'>
                   {text}
                   <br />
                   <span className='font-bold text-2xl'>{strong}</span>
