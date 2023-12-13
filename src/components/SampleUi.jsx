@@ -6,19 +6,19 @@ gsap.registerPlugin(ScrollTrigger);
 const SampleUi = () => {
   const contents = [
     {
-      scr: './1.png',
+      scr: './ui/ui8.png',
       text: `まず、好きな雰囲気の惑星の\n主と話してみてください`,
     },
     {
-      scr: './1.png',
+      scr: './ui/ui4.png',
       text: '自分と似ている惑星を\n探すこともできます！',
     },
     {
-      scr: './1.png',
+      scr: './ui/ui2.png',
       text: '話も合うし会ってみたいけど\n少し不安なところが、、、',
     },
     {
-      scr: './1.png',
+      scr: './ui/ui1.png',
       text: '仮想空間で安全に出会いを\nお楽しみください！',
     },
   ];

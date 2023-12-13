@@ -11,7 +11,7 @@ const VideoContent = () => {
   };
   return (
     <div className='w-screen h-screen font-bold text-white flex justify-center items-center'>
-      <div className=' w-1/2 h-1/2 flex justify-center items-center'>
+      <div className='w-full md:w-2/3 h-1/2 flex justify-center items-center px-4'>
         <YouTube className='w-full h-full' videoId='0ghIVa_VWg0' opts={opts} />
       </div>
     </div>
