@@ -20,11 +20,8 @@ function App() {
 
   useEffect(() => {
     if (document.readyState === 'complete') {
-      console.log(123);
       handleWindowLoad();
-      window.scrollTo(0, 0);
     }
-    console.log(123);
     window.addEventListener('load', handleWindowLoad);
     return () => {
       window.removeEventListener('load', handleWindowLoad);
