@@ -16,7 +16,7 @@ const MainPage = () => {
   }, []);
   return (
     <div ref={mainVisual} className='relative h-screen w-full'>
-      <div className='w-full h-full flex justify-center items-center bg-[url("/bg/main-sx.png")] md:bg-[url("/bg/main.png")] bg-cover bg-no-repeat bg-center'>
+      <div className='w-full h-full flex justify-center items-center bg-[url("/bg/main-sx.png")] sm:bg-[url("/bg/main.png")] bg-cover bg-no-repeat bg-center'>
         <div className='w-full h-full flex justify-center items-center'>
           <img
             className='absolute w-[200px] top-[30px] left-[30px]'
