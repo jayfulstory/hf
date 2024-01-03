@@ -92,13 +92,9 @@ const Horizontal = () => {
       />
       <div
         ref={sectionRef}
-        className='h-screen flex items-center  gap-x-40 px-[25vw] w-fit'
+        className='h-screen flex items-center  gap-x-40 px-[20vw] w-fit'
       >
-        <h4 className='text-white font-bold text-center text-3xl lg:text-5xl 2xl:text-7xl w-[200px] lg:w-[300px] 2xl:w-[450px]'>
-          StellaMeetで
-          <br />
-          できること
-        </h4>
+        <img className='w-[320px]' src='./text/text1.svg' alt='' />
         {horizontalContents.map(content => (
           <HorizontalContent key={content.title} content={content} />
         ))}

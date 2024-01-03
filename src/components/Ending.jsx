@@ -64,11 +64,20 @@ const Ending = () => {
         ref={download}
         className='w-screen h-screen flex justify-center items-center bg-blue-300 absolute top-0 bottom-0 '
       >
-        <div className=' w-[800px] h-[800px] flex flex-col items-center justify-center'>
-          <div className='w-full h-[300px] bg-red-400'></div>
-          <div className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold h-[300px] flex justify-center items-center'>
+        <div className=' w-[800px] h-full flex flex-col items-center justify-center'>
+          <img
+            className=' w-[375px] md:w-[600px]'
+            src='./ui/mock-up.png'
+            alt=''
+          />
+          <img
+            className='w-[600px] h-auto mt-12'
+            src='./text/text4.svg'
+            alt=''
+          />
+          {/* <div className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold h-[300px] flex justify-center items-center'>
             <h2>今すぐ無料ではじめる</h2>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

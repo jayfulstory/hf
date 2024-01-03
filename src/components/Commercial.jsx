@@ -56,11 +56,11 @@ const Commercial = () => {
       <img className='w-full' src='./bg/bg-cover1.svg' alt='' />
 
       <div className='relative w-full  flex flex-col justify-center items-center bg-[#3D3584]'>
-        <div className=' max-w-[80vw] text-center leading-8 '>
-          <h3 className='text-3xl lg:text-6xl 2xl:text-7xl font-bold my-8'>
+        <div className=' max-w-[80vw] text-center '>
+          <h3 className='text-3xl lg:text-6xl 2xl:text-7xl font-bold my-8 '>
             まずは宇宙でデートしよう
           </h3>
-          <p className='text-md lg:text-xl 2xl:text-2xl'>
+          <p className='text-md lg:text-xl 2xl:text-2xl leading-10'>
             StellaMeetでは二人だけの惑星でデートをすることができます。
             <br />
             宇宙の美しさに包まれた中でのデートは、まるで夢のよう。

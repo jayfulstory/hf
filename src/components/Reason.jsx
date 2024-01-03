@@ -25,11 +25,12 @@ const Reason = () => {
         src='./bg/circle.svg'
         alt=''
       />
-      <h1 className='text-3xl lg:text-6xl text-white font-bold mt-[20vh] mb-24 z-10'>
+      {/* <h1 className='text-3xl lg:text-6xl text-white font-bold mt-[20vh] mb-24 z-10'>
         毎日<span className='text-4xl lg:text-7xl'>30万</span>組が
         <br />
         マッチングしています
-      </h1>
+      </h1> */}
+      <img className='lg:w-[65vw] lg:py-12' src='./text/text2.svg' alt='' />
       <div className='px-8 z-10'>
         <div className='flex flex-wrap justify-center items-center gap-12'>
           {reasons.map(({ text, strong }, i) => {
